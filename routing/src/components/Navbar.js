@@ -1,7 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {  NavLink } from 'react-router-dom';
 
 function Navbar() {
+    const navlinkstyle=({isActive})=>{
+        return {
+            fontweight: isActive  ? '800' : 'normal',
+            textDecoration : isActive ? 'none':"underline",
+
+        }
+    }
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -13,10 +20,10 @@ function Navbar() {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <Link to="/" className="nav-link active" aria-current="page" href="#">Home</Link>
+          <NavLink style={navlinkstyle} to="/" className="nav-link" aria-current="page" href="#">Home</NavLink>
         </li>
         <li className="nav-item">
-          < Link  to="/About" className="nav-link" href="#">About</Link>
+          <NavLink style={navlinkstyle}  to="/About" className="nav-link" href="#">About</NavLink>
         </li>
        
         
