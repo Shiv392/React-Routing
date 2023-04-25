@@ -1,6 +1,8 @@
-import React from 'react'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
+  const navigate=useNavigate();
   return (
     <div className='container'>
       <h1 className='text text-danger'>This is home page</h1>
@@ -41,6 +43,9 @@ function Home() {
       </div>
     </div>
   </div>
+</div>
+<div className='container m-3'>
+<button onClick={()=>navigate('order-summary')} className='btn btn-danger btn-lg'>Order Place</button>
 </div>
     </div>
   )
