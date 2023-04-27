@@ -5,6 +5,9 @@ import About from './components/About'
 import Navbar from './components/Navbar';
 import OrderSummery from './components/OrderSummery';
 import NoMatch from './components/NoMatch';
+import Product from './components/Product';
+import FeaturedProducts from './components/FeaturedProducts';
+import NewProducts from './components/NewProducts';
 
 function App() {
   return (
@@ -15,6 +18,11 @@ function App() {
         <Route path='about' element={ <About />} />
         <Route path="/order-summary" element={ <OrderSummery/>} />
         <Route path="*"  element={<NoMatch/>}/>
+        <Route path='product' element={<Product />}>
+          {/* definging child route */}
+          <Route path="featured" element={<FeaturedProducts/>} />
+          <Route path="newproducts" element={ <NewProducts />} />
+        </Route>
       </Routes>
     </div>
    

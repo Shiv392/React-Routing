@@ -25,6 +25,9 @@ function Navbar() {
         <li className="nav-item">
           <NavLink style={navlinkstyle}  to="/About" className="nav-link" href="#">About</NavLink>
         </li>
+        <li className="nav-item">
+          <NavLink style={navlinkstyle}  to="/Product" className="nav-link" href="#">Product</NavLink>
+        </li>
        
         
       </ul>
