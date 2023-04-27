@@ -1,5 +1,5 @@
 import './App.css';
-import {Routes,Route} from 'react-router-dom';
+import {Routes,Route, Router} from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About'
 import Navbar from './components/Navbar';
@@ -8,6 +8,9 @@ import NoMatch from './components/NoMatch';
 import Product from './components/Product';
 import FeaturedProducts from './components/FeaturedProducts';
 import NewProducts from './components/NewProducts';
+import Users from './components/Users';
+import UserDetails from './components/UserDetails';
+import Admin from './components/Admin';
 
 function App() {
   return (
@@ -25,6 +28,12 @@ function App() {
           <Route index path="featured" element={<FeaturedProducts/>} />
           <Route path="newproducts" element={ <NewProducts />} />
         </Route>
+        <Route path="users" element={<Users />}>
+        <Route path=":id" element={<UserDetails />} />
+        <Route path="admin" element={<Admin />} />
+        </Route>
+        <Route path="*" element={<NoMatch />} />
+
       </Routes>
     </div>
    
