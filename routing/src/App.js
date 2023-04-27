@@ -20,7 +20,9 @@ function App() {
         <Route path="*"  element={<NoMatch/>}/>
         <Route path='product' element={<Product />}>
           {/* definging child route */}
-          <Route path="featured" element={<FeaturedProducts/>} />
+          {/* index route */}
+          <Route index element={<FeaturedProducts />} />
+          <Route index path="featured" element={<FeaturedProducts/>} />
           <Route path="newproducts" element={ <NewProducts />} />
         </Route>
       </Routes>
